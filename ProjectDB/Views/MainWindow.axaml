@@ -1,18 +1,662 @@
-﻿<Window xmlns="https://github.com/avaloniaui"
+﻿<Window Name="UI"
+		xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:ProjectDB.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="100" d:DesignHeight="150"
         x:Class="ProjectDB.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="ProjectDB">
+        Title="ProjectDB - Main Page">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      <Grid>
+		<StackPanel>
 
+			<!--UI1-->
+
+			<Grid Name="UI1"
+					IsVisible="True"
+					RowDefinitions="Auto, *, Auto">
+
+				<!--Title-->
+
+				<Grid Grid.Row="0"
+						Height="110"
+						ColumnDefinitions="*">
+					<Label 
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							FontSize="40" 
+							>
+						Final Project
+					</Label>
+				</Grid>
+
+				<!--Buttons-->
+
+				<Grid Grid.Row="1"
+						ColumnDefinitions="*,230,230,*">
+					<Button Grid.Column="1"
+							FontSize="20"
+							HorizontalAlignment="Center"
+							Click="iniTree">
+						Create a Tree
+					</Button>
+					<Button Grid.Column="2"
+							FontSize="20"
+							HorizontalAlignment="Center"
+							Click="iniGraph">
+						Create a Graph
+					</Button>
+				</Grid>
+
+				<!--Bottom-->
+
+				<Grid Grid.Row="2"
+						Height="38">
+					<Button Grid.Row="0"
+								HorizontalContentAlignment="Center"
+								HorizontalAlignment="Right"
+								Click="exit">
+						Close Window
+					</Button>
+				</Grid>
+<TextBlock Text="Created by Rodrigo Santacruz E." HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+			</Grid>
+
+			<!--UI2(TREES)-->
+
+			<Grid Name="UI2"
+					IsVisible="false"
+					RowDefinitions="Auto, *, *, Auto">
+
+				<!--Title-->
+
+				<Grid Grid.Row="0"
+						Height="110"
+						ColumnDefinitions="*">
+					<Label 
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							FontSize="20"
+							
+							FontWeight="Black">
+						Tree App - Santacruz E.
+					</Label>
+				</Grid>
+
+				<!--Content-->
+
+				<Grid Grid.Row="1"
+						ColumnDefinitions="*, Auto, 5, Auto, *">
+					<Grid Grid.Column="1"
+							RowDefinitions="Auto, 5, Auto, 5, Auto">
+						<Button Grid.Row="0"
+								Width="176"
+								FontSize="20"
+								HorizontalContentAlignment="Center"
+								Click="addNode">
+							Create Node
+						</Button>
+						<Button Grid.Row="2"
+								Width="176"
+								FontSize="20"
+								HorizontalContentAlignment="Center"
+								Click="removeNT">
+							Remove Node
+						</Button>
+						<Button Grid.Row="4"
+								Width="176"
+								FontSize="20"
+								HorizontalContentAlignment="Center"
+								Click="searchNT">
+							Search Node
+						</Button>
+					</Grid>
+					<Grid Grid.Column="3"
+							RowDefinitions="Auto, 5, Auto, 5, Auto">
+						<TextBox Name="addNodeNum"
+								Grid.Row="0"
+								Width="176"
+								Height="50"
+								BorderThickness="2"								
+								Watermark="Number"
+								TextAlignment="Center"
+								FontSize="20"/>
+
+						<TextBox Name="remNodeNum"
+							    Grid.Row="2"
+								Width="176"
+								Height="50"
+								BorderThickness="2"								
+								Watermark="Node"
+								TextAlignment="Center"
+								FontSize="20"/>
+
+						<TextBox Name="seaNodeNum"
+								Grid.Row="4"
+								Width="176"
+								Height="50"
+								Watermark="Node"
+								TextAlignment="Center"
+								FontSize="20"/>
+					</Grid>
+				</Grid>
+				<Grid Grid.Row="2"
+						RowDefinitions="5, Auto">
+					<Button Grid.Row="1"
+							Width="176"
+							FontSize="20"
+							FontWeight="Black"
+							HorizontalAlignment="Center"
+							HorizontalContentAlignment="Center"
+							Click="printTree">
+						See Tree
+					</Button>
+				</Grid>
+
+				<!--Bottom-->
+
+				<Grid Grid.Row="3"
+						Height="38">
+					<Button Name="defCLose1"
+							Grid.Row="0"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Right"
+							Margin="5,5,5,5"
+							Click="exit">
+						Close
+					</Button>
+				</Grid>
+			</Grid>
+
+			<!--UI3(GRAPHS)-->
+
+			<Grid Name="UI3"
+					IsVisible="False"
+					RowDefinitions="Auto, *, Auto">
+
+				<!--Title-->
+
+				<Grid Grid.Row="0"
+						Height="110"
+						ColumnDefinitions="*">
+					<Label 
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							FontSize="40"
+							
+							FontWeight="Black">
+						Graph App - Santacruz E
+					</Label>
+				</Grid>
+
+				<!--Buttons-->
+
+				<Grid Grid.Row="1"
+						RowDefinitions="Auto, 10, Auto, 10, Auto">
+					<Grid Grid.Row="0">
+						<Label HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								FontWeight="Black"
+								FontSize="15">
+							This UI was made for graphs with 6 nodes&#x0d;              (ONLY LETTERS ALLOWED)
+						</Label>
+					</Grid>
+					<Grid Grid.Row="2"
+							ColumnDefinitions="*, Auto, 5, Auto, 5, Auto, *">
+						<Grid Grid.Column="1"
+								RowDefinitions="Auto, 5, Auto, 5,  Auto">
+							<TextBox Name="GN1"
+									Grid.Row="0"
+									BorderThickness="2"
+									TextAlignment="Center"
+									FontSize="30"/>
+							<TextBox Name="GN2"
+									Grid.Row="2"
+									BorderThickness="2"
+									TextAlignment="Center"
+									FontSize="30"/>
+						</Grid>
+						<Grid Grid.Column="3"
+								RowDefinitions="Auto, 5, Auto, 5,  Auto">
+							<TextBox Name="GN3"
+									Grid.Row="0"
+									BorderThickness="2"
+									TextAlignment="Center"
+									FontSize="30"/>
+							<TextBox Name="GN4"
+									Grid.Row="2"
+									BorderThickness="2"
+									TextAlignment="Center"
+									FontSize="30"/>
+						</Grid>
+						<Grid Grid.Column="5"
+								RowDefinitions="Auto, 5, Auto, 5,  Auto">
+							<TextBox Name="GN5"
+									Grid.Row="0"
+									BorderThickness="2"
+									TextAlignment="Center"
+									FontSize="30"/>
+							<TextBox Name="GN6"
+									Grid.Row="2"
+									BorderThickness="2"
+									TextAlignment="Center"
+									FontSize="30"/>
+						</Grid>
+					</Grid>
+					<Grid Grid.Row="4">
+						<Button 
+								
+								FontSize="20"
+								FontWeight="Black"
+								HorizontalAlignment="Center"
+								Click="addGN">
+							Create Node
+						</Button>
+					</Grid>
+				</Grid>
+
+				<!--Bottom-->
+
+				<Grid Grid.Row="2"
+						Height="38">
+					<Button Grid.Row="0"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Right"
+							Margin="5,5,5,5"
+							Click="exit">
+						Close
+					</Button>
+				</Grid>
+			</Grid>
+
+			<!--UI3(GRAPHS)_2-->
+
+			<Grid Name="UI3_2"
+					IsVisible="false"
+					RowDefinitions="Auto, *, Auto">
+
+				<!--Title-->
+
+				<Grid Grid.Row="0"
+						Height="110"
+						ColumnDefinitions="*">
+					<Label 
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							FontSize="30"
+							FontWeight="Black">
+						Graph App - SantacruzE
+					</Label>
+				</Grid>
+
+				<!--Buttons-->
+
+				<Grid Grid.Row="1"
+						RowDefinitions="Auto, 5, Auto, 5, Auto, 5, Auto">
+					<Grid Grid.Row="0"
+							ColumnDefinitions="*, Auto, 5, Auto, 5, Auto, *">
+						<Button Grid.Column="1"
+								Width="176"
+								Height="73"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								VerticalContentAlignment="Center"
+								Click="addEdge">
+							Add Edge
+						</Button>
+						<Grid Grid.Column="3"
+								RowDefinitions="Auto, 3, Auto">
+							<TextBox Name="to"
+								Grid.Row="0"
+								Width="176"
+								BorderThickness="2"
+								Watermark="FROM"
+								TextAlignment="Center"
+								FontSize="15"/>
+							<TextBox Name="from"
+								Grid.Row="2"
+								Width="176"
+								BorderThickness="2"
+								Watermark="TO"
+								TextAlignment="Center"
+								FontSize="15"/>
+						</Grid>
+						<Grid Grid.Column="5">
+							<TextBox Name="fee"
+								BorderThickness="2"
+								Watermark="$"
+								TextAlignment="Center"
+								FontSize="30"/>
+						</Grid>
+					</Grid>
+					<Grid Grid.Row="2"
+							ColumnDefinitions="*, Auto, 5, Auto, *">
+						<Button Grid.Column="1"
+								Width="176"
+								FontSize="20"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								Click="searchGN">
+							Search 
+						</Button>
+						<TextBox Name="SV"
+								Grid.Column="3"
+								Width="176"
+								BorderThickness="2"
+								Watermark="NODE"
+								TextAlignment="Center"
+								FontSize="28"/>
+						</Grid>
+					<Grid Grid.Row="4"
+							ColumnDefinitions="*, Auto, 5, Auto, *">
+						<Button Grid.Column="1"
+								Width="176"
+								Height="73"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								VerticalContentAlignment="Center"
+								Click="shortest">
+							Short Way
+						</Button>
+						<Grid Grid.Column="3"
+							  RowDefinitions="Auto, 3, Auto">
+							<TextBox Name="toSP"
+								Grid.Row="0"
+								Width="176"
+								BorderThickness="2"
+								Watermark="FROM"
+								TextAlignment="Center"
+								FontSize="15"/>
+							<TextBox Name="fromSP"
+								Grid.Row="2"
+								Width="176"
+								BorderThickness="2"
+								Watermark="TO"
+								TextAlignment="Center"
+								FontSize="15"/>
+						</Grid>
+					</Grid>
+					<Grid Grid.Row="6"
+						  ColumnDefinitions="*, Auto, 5, Auto, *">
+						<Button Grid.Column="1"
+								Width="176"
+								FontSize="20"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								Click="bfs_dfs">
+							BFS/DFS
+						</Button>
+						<Button Grid.Column="3"
+								Width="176"
+								FontSize="30"
+								FontWeight="Black"
+								HorizontalContentAlignment="Center"
+								HorizontalAlignment="Center"
+								Click="printGraph">
+							See Graph
+						</Button>
+					</Grid>
+				</Grid>
+				
+
+				<!--Bottom-->
+
+				<Grid Grid.Row="3"
+						Height="38">
+					<Button Name="defCLose2"
+							Grid.Row="0"
+							FontWeight="Black"
+							HorizontalContentAlignment="Center"
+							HorizontalAlignment="Right"
+							Margin="5,5,5,5"
+							Click="exit">
+						Close
+					</Button>
+				</Grid>
+			</Grid>
+		</StackPanel>
+		
+		<!--RES-->
+
+		<Grid IsVisible="False"
+			  RowDefinitions="*, Auto"
+			  Name="RES"
+			  Width="600"
+			  Height="310"
+			  Background="#0c1115"
+			  HorizontalAlignment="Center"
+			  VerticalAlignment="Center">
+			<Grid Name="SNT"
+				  IsVisible="False"
+				  Grid.Row="0">
+				<TextBlock Name="SNTR"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+			</Grid>
+			<Grid Name="PT"
+				  IsVisible="False"
+				  Grid.Row="0"
+				  RowDefinitions="Auto, Auto, Auto, Auto">
+				<TextBlock Name="PTR1"
+						   Grid.Row="0"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="PTR2"
+						   Grid.Row="1"
+						   FontSize="25"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="PTR3"
+						   Grid.Row="2"
+						   FontSize="25"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="PTR4"
+						   Grid.Row="4"
+						   FontSize="25"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+			</Grid>
+				<Grid Name="searchIG"
+					  IsVisible="False"
+					  Grid.Row="0">
+					<TextBlock Name="SGR"
+							   FontSize="40"
+							   FontWeight="Black"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"
+							   TextAlignment="Center">
+					</TextBlock>
+				</Grid>
+			<Grid Name="BDR"
+				  IsVisible="False"
+				  Grid.Row="0"
+				  RowDefinitions="Auto, Auto ,Auto, Auto">
+				<TextBlock 
+						   Grid.Row="0"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+					BFS
+				</TextBlock>
+				<TextBlock Name="BFS"
+						   Grid.Row="1"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Foreground="#FEE715"
+						   Grid.Row="2"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+					DFS
+				</TextBlock>
+				<TextBlock Name="DFS"
+						   Grid.Row="3"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+			</Grid>
+			<Grid Name="SPG"
+				  IsVisible="False"
+				  Grid.Row="0"
+				  RowDefinitions="Auto, Auto, Auto">
+				<TextBlock Grid.Row="0"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+					Shortest Way
+				</TextBlock>
+				<TextBlock Name="SPGR"
+						   Grid.Row="1"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="SPGR2"
+						   Grid.Row="2"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+			</Grid>
+			<Grid Name="PG"
+				  IsVisible="False"
+				  Grid.Row="0"
+				  RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+				<TextBlock Grid.Row="0"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+					GRAPH
+				</TextBlock>
+				<TextBlock Name="PGR"
+						   Grid.Row="1"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Grid.Row="2"
+						   FontSize="40"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+					MATRIX
+				</TextBlock>
+				<TextBlock Name="M1"
+						   Grid.Row="3"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="M2"
+						   Grid.Row="4"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="M3"
+						   Grid.Row="5"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="M4"
+						   Grid.Row="6"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="M5"
+						   Grid.Row="7"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="M6"
+						   Grid.Row="8"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+				<TextBlock Name="M7"
+						   Grid.Row="9"
+						   FontSize="20"
+						   FontWeight="Black"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   TextAlignment="Center">
+				</TextBlock>
+			</Grid>
+			<Button Grid.Row="1"
+					FontWeight="Black"
+					HorizontalAlignment="Right"
+					HorizontalContentAlignment="Center"
+					Margin="2,2,2,2"
+					Click="closeRes">
+				Close
+			</Button>
+		</Grid>
+	</Grid>
 </Window>
 
