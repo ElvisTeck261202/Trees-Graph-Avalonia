@@ -255,153 +255,153 @@ namespace ProjectDB.Views
             BFS.Text = GE.BFSLS;
             DFS.Text = GE.DFSLS;
         }
-        public void shortest(object sender, RoutedEventArgs e)
-        {
-            RES.IsVisible = true;
-            defCLose1.IsVisible = false;
-            defCLose2.IsVisible = false;
-            SPG.IsVisible = true;
-            if (fromSP.Text == "V1")
-            {
-                if (toSP.Text == "V2")
-                {
-                    GE.shortestPath(V1, V2);
-                }
-                else if (toSP.Text == "V3")
-                {
-                    GE.shortestPath(V1, V3);
-                }
-                else if (toSP.Text == "V4")
-                {
-                    GE.shortestPath(V1, V4);
-                }
-                else if (toSP.Text == "V5")
-                {
-                    GE.shortestPath(V1, V5);
-                }
-                else if (toSP.Text == "V6")
-                {
-                    GE.shortestPath(V1, V6);
-                }
-            }
-            else if (fromSP.Text == "V2")
-            {
-                if (toSP.Text == "V1")
-                {
-                    GE.shortestPath(V2, V1);
-                }
-                else if (toSP.Text == "V3")
-                {
-                    GE.shortestPath(V2, V3);
-                }
-                else if (toSP.Text == "V4")
-                {
-                    GE.shortestPath(V2, V4);
-                }
-                else if (toSP.Text == "V5")
-                {
-                    GE.shortestPath(V2, V5);
-                }
-                else if (toSP.Text == "V6")
-                {
-                    GE.shortestPath(V2, V6);
-                }
-            }
-            else if (fromSP.Text == "V3")
-            {
-                if (toSP.Text == "V1")
-                {
-                    GE.shortestPath(V3, V1);
-                }
-                else if (toSP.Text == "V2")
-                {
-                    GE.shortestPath(V3, V2);
-                }
-                else if (toSP.Text == "V4")
-                {
-                    GE.shortestPath(V3, V4);
-                }
-                else if (toSP.Text == "V5")
-                {
-                    GE.shortestPath(V3, V5);
-                }
-                else if (toSP.Text == "V6")
-                {
-                    GE.shortestPath(V3, V6);
-                }
-            }
-            else if (fromSP.Text == "V4")
-            {
-                if (toSP.Text == "V4")
-                {
-                    GE.shortestPath(V4, V1);
-                }
-                else if (toSP.Text == "V3")
-                {
-                    GE.shortestPath(V4, V3);
-                }
-                else if (toSP.Text == "V2")
-                {
-                    GE.shortestPath(V4, V2);
-                }
-                else if (toSP.Text == "V5")
-                {
-                    GE.shortestPath(V4, V5);
-                }
-                else if (toSP.Text == "V6")
-                {
-                    GE.shortestPath(V4, V6);
-                }
-            }
-            else if (fromSP.Text == "V5")
-            {
-                if (toSP.Text == "V1")
-                {
-                    GE.shortestPath(V5, V1);
-                }
-                else if (toSP.Text == "V3")
-                {
-                    GE.shortestPath(V5, V3);
-                }
-                else if (toSP.Text == "V4")
-                {
-                    GE.shortestPath(V5, V4);
-                }
-                else if (toSP.Text == "V2")
-                {
-                    GE.shortestPath(V5, V2);
-                }
-                else if (toSP.Text == "V6")
-                {
-                    GE.shortestPath(V5, V6);
-                }
-            }
-            else if (fromSP.Text == "V6")
-            {
-                if (toSP.Text == "V1")
-                {
-                    GE.shortestPath(V6, V1);
-                }
-                else if (toSP.Text == "V3")
-                {
-                    GE.shortestPath(V6, V3);
-                }
-                else if (toSP.Text == "V4")
-                {
-                    GE.shortestPath(V6, V4);
-                }
-                else if (toSP.Text == "V5")
-                {
-                    GE.shortestPath(V6, V5);
-                }
-                else if (toSP.Text == "V2")
-                {
-                    GE.shortestPath(V6, V2);
-                }
-            }
-            SPGR.Text = GE.SPLS;
-            SPGR2.Text = GE.SPLS2;
-        }
+        //public void shortest(object sender, RoutedEventArgs e)
+        //{
+        //    RES.IsVisible = true;
+        //    defCLose1.IsVisible = false;
+        //    defCLose2.IsVisible = false;
+        //    SPG.IsVisible = true;
+        //    if (fromSP.Text == "V1")
+        //    {
+        //        if (toSP.Text == "V2")
+        //        {
+        //            GE.shortestPath(V1, V2);
+        //        }
+        //        else if (toSP.Text == "V3")
+        //        {
+        //            GE.shortestPath(V1, V3);
+        //        }
+        //        else if (toSP.Text == "V4")
+        //        {
+        //            GE.shortestPath(V1, V4);
+        //        }
+        //        else if (toSP.Text == "V5")
+        //        {
+        //            GE.shortestPath(V1, V5);
+        //        }
+        //        else if (toSP.Text == "V6")
+        //        {
+        //            GE.shortestPath(V1, V6);
+        //        }
+        //    }
+        //    else if (fromSP.Text == "V2")
+        //    {
+        //        if (toSP.Text == "V1")
+        //        {
+        //            GE.shortestPath(V2, V1);
+        //        }
+        //        else if (toSP.Text == "V3")
+        //        {
+        //            GE.shortestPath(V2, V3);
+        //        }
+        //        else if (toSP.Text == "V4")
+        //        {
+        //            GE.shortestPath(V2, V4);
+        //        }
+        //        else if (toSP.Text == "V5")
+        //        {
+        //            GE.shortestPath(V2, V5);
+        //        }
+        //        else if (toSP.Text == "V6")
+        //        {
+        //            GE.shortestPath(V2, V6);
+        //        }
+        //    }
+        //    else if (fromSP.Text == "V3")
+        //    {
+        //        if (toSP.Text == "V1")
+        //        {
+        //            GE.shortestPath(V3, V1);
+        //        }
+        //        else if (toSP.Text == "V2")
+        //        {
+        //            GE.shortestPath(V3, V2);
+        //        }
+        //        else if (toSP.Text == "V4")
+        //        {
+        //            GE.shortestPath(V3, V4);
+        //        }
+        //        else if (toSP.Text == "V5")
+        //        {
+        //            GE.shortestPath(V3, V5);
+        //        }
+        //        else if (toSP.Text == "V6")
+        //        {
+        //            GE.shortestPath(V3, V6);
+        //        }
+        //    }
+        //    else if (fromSP.Text == "V4")
+        //    {
+        //        if (toSP.Text == "V4")
+        //        {
+        //            GE.shortestPath(V4, V1);
+        //        }
+        //        else if (toSP.Text == "V3")
+        //        {
+        //            GE.shortestPath(V4, V3);
+        //        }
+        //        else if (toSP.Text == "V2")
+        //        {
+        //            GE.shortestPath(V4, V2);
+        //        }
+        //        else if (toSP.Text == "V5")
+        //        {
+        //            GE.shortestPath(V4, V5);
+        //        }
+        //        else if (toSP.Text == "V6")
+        //        {
+        //            GE.shortestPath(V4, V6);
+        //        }
+        //    }
+        //    else if (fromSP.Text == "V5")
+        //    {
+        //        if (toSP.Text == "V1")
+        //        {
+        //            GE.shortestPath(V5, V1);
+        //        }
+        //        else if (toSP.Text == "V3")
+        //        {
+        //            GE.shortestPath(V5, V3);
+        //        }
+        //        else if (toSP.Text == "V4")
+        //        {
+        //            GE.shortestPath(V5, V4);
+        //        }
+        //        else if (toSP.Text == "V2")
+        //        {
+        //            GE.shortestPath(V5, V2);
+        //        }
+        //        else if (toSP.Text == "V6")
+        //        {
+        //            GE.shortestPath(V5, V6);
+        //        }
+        //    }
+        //    else if (fromSP.Text == "V6")
+        //    {
+        //        if (toSP.Text == "V1")
+        //        {
+        //            GE.shortestPath(V6, V1);
+        //        }
+        //        else if (toSP.Text == "V3")
+        //        {
+        //            GE.shortestPath(V6, V3);
+        //        }
+        //        else if (toSP.Text == "V4")
+        //        {
+        //            GE.shortestPath(V6, V4);
+        //        }
+        //        else if (toSP.Text == "V5")
+        //        {
+        //            GE.shortestPath(V6, V5);
+        //        }
+        //        else if (toSP.Text == "V2")
+        //        {
+        //            GE.shortestPath(V6, V2);
+        //        }
+        //    }
+        //    SPGR.Text = GE.SPLS;
+        //    SPGR2.Text = GE.SPLS2;
+        //}
         public void printGraph(object sender, RoutedEventArgs e)
         {
             RES.IsVisible = true;

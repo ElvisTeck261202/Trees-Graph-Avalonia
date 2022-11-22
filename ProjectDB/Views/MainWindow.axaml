@@ -65,7 +65,7 @@
 						Close Window
 					</Button>
 				</Grid>
-<TextBlock Text="Created by Rodrigo Santacruz E." HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+<TextBlock Text="Created by Uriel Duran" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
 			</Grid>
 
 			<!--UI2(TREES)-->
@@ -84,8 +84,8 @@
 							HorizontalAlignment="Center"
 							FontSize="20"
 							
-							FontWeight="Black">
-						Tree App - Santacruz E.
+							FontWeight="Light">
+						Tree App - Uriel Duran
 					</Label>
 				</Grid>
 
@@ -151,7 +151,7 @@
 					<Button Grid.Row="1"
 							Width="176"
 							FontSize="20"
-							FontWeight="Black"
+							FontWeight="Light"
 							HorizontalAlignment="Center"
 							HorizontalContentAlignment="Center"
 							Click="printTree">
@@ -165,7 +165,7 @@
 						Height="38">
 					<Button Name="defCLose1"
 							Grid.Row="0"
-							FontWeight="Black"
+							FontWeight="Light"
 							HorizontalContentAlignment="Center"
 							HorizontalAlignment="Right"
 							Margin="5,5,5,5"
@@ -191,8 +191,8 @@
 							HorizontalAlignment="Center"
 							FontSize="40"
 							
-							FontWeight="Black">
-						Graph App - Santacruz E
+							FontWeight="Light">
+						Graph App - Uriel Duran
 					</Label>
 				</Grid>
 
@@ -203,7 +203,7 @@
 					<Grid Grid.Row="0">
 						<Label HorizontalAlignment="Center"
 								VerticalAlignment="Center"
-								FontWeight="Black"
+								FontWeight="Light"
 								FontSize="15">
 							This UI was made for graphs with 6 nodes&#x0d;              (ONLY LETTERS ALLOWED)
 						</Label>
@@ -254,7 +254,7 @@
 						<Button 
 								
 								FontSize="20"
-								FontWeight="Black"
+								FontWeight="Light"
 								HorizontalAlignment="Center"
 								Click="addGN">
 							Create Node
@@ -267,7 +267,7 @@
 				<Grid Grid.Row="2"
 						Height="38">
 					<Button Grid.Row="0"
-							FontWeight="Black"
+							FontWeight="Light"
 							HorizontalContentAlignment="Center"
 							HorizontalAlignment="Right"
 							Margin="5,5,5,5"
@@ -292,8 +292,8 @@
 							VerticalAlignment="Center"
 							HorizontalAlignment="Center"
 							FontSize="30"
-							FontWeight="Black">
-						Graph App - SantacruzE
+							FontWeight="Light">
+						Graph App - Uriel Duran
 					</Label>
 				</Grid>
 
@@ -307,7 +307,7 @@
 								Width="176"
 								Height="73"
 								FontSize="30"
-								FontWeight="Black"
+								FontWeight="Light"
 								HorizontalContentAlignment="Center"
 								VerticalContentAlignment="Center"
 								Click="addEdge">
@@ -343,7 +343,7 @@
 						<Button Grid.Column="1"
 								Width="176"
 								FontSize="20"
-								FontWeight="Black"
+								FontWeight="Light"
 								HorizontalContentAlignment="Center"
 								Click="searchGN">
 							Search 
@@ -356,50 +356,14 @@
 								TextAlignment="Center"
 								FontSize="28"/>
 						</Grid>
-					<Grid Grid.Row="4"
-							ColumnDefinitions="*, Auto, 5, Auto, *">
-						<Button Grid.Column="1"
-								Width="176"
-								Height="73"
-								FontSize="30"
-								FontWeight="Black"
-								HorizontalContentAlignment="Center"
-								VerticalContentAlignment="Center"
-								Click="shortest">
-							Short Way
-						</Button>
-						<Grid Grid.Column="3"
-							  RowDefinitions="Auto, 3, Auto">
-							<TextBox Name="toSP"
-								Grid.Row="0"
-								Width="176"
-								BorderThickness="2"
-								Watermark="FROM"
-								TextAlignment="Center"
-								FontSize="15"/>
-							<TextBox Name="fromSP"
-								Grid.Row="2"
-								Width="176"
-								BorderThickness="2"
-								Watermark="TO"
-								TextAlignment="Center"
-								FontSize="15"/>
-						</Grid>
-					</Grid>
+			
 					<Grid Grid.Row="6"
 						  ColumnDefinitions="*, Auto, 5, Auto, *">
-						<Button Grid.Column="1"
-								Width="176"
-								FontSize="20"
-								FontWeight="Black"
-								HorizontalContentAlignment="Center"
-								Click="bfs_dfs">
-							BFS/DFS
-						</Button>
+
 						<Button Grid.Column="3"
 								Width="176"
 								FontSize="30"
-								FontWeight="Black"
+								FontWeight="Light"
 								HorizontalContentAlignment="Center"
 								HorizontalAlignment="Center"
 								Click="printGraph">
@@ -415,7 +379,7 @@
 						Height="38">
 					<Button Name="defCLose2"
 							Grid.Row="0"
-							FontWeight="Black"
+							FontWeight="Light"
 							HorizontalContentAlignment="Center"
 							HorizontalAlignment="Right"
 							Margin="5,5,5,5"
@@ -433,7 +397,7 @@
 			  Name="RES"
 			  Width="600"
 			  Height="310"
-			  Background="#0c1115"
+			  Background="#FFFFFF"
 			  HorizontalAlignment="Center"
 			  VerticalAlignment="Center">
 			<Grid Name="SNT"
@@ -441,7 +405,7 @@
 				  Grid.Row="0">
 				<TextBlock Name="SNTR"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -454,7 +418,7 @@
 				<TextBlock Name="PTR1"
 						   Grid.Row="0"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -462,7 +426,7 @@
 				<TextBlock Name="PTR2"
 						   Grid.Row="1"
 						   FontSize="25"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -470,7 +434,7 @@
 				<TextBlock Name="PTR3"
 						   Grid.Row="2"
 						   FontSize="25"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -478,7 +442,7 @@
 				<TextBlock Name="PTR4"
 						   Grid.Row="4"
 						   FontSize="25"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -489,7 +453,7 @@
 					  Grid.Row="0">
 					<TextBlock Name="SGR"
 							   FontSize="40"
-							   FontWeight="Black"
+							   FontWeight="Light"
 							   HorizontalAlignment="Center"
 							   VerticalAlignment="Center"
 							   TextAlignment="Center">
@@ -502,7 +466,7 @@
 				<TextBlock 
 						   Grid.Row="0"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -511,7 +475,7 @@
 				<TextBlock Name="BFS"
 						   Grid.Row="1"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -519,7 +483,7 @@
 				<TextBlock Foreground="#FEE715"
 						   Grid.Row="2"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -528,7 +492,7 @@
 				<TextBlock Name="DFS"
 						   Grid.Row="3"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -540,7 +504,7 @@
 				  RowDefinitions="Auto, Auto, Auto">
 				<TextBlock Grid.Row="0"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -549,7 +513,7 @@
 				<TextBlock Name="SPGR"
 						   Grid.Row="1"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -557,7 +521,7 @@
 				<TextBlock Name="SPGR2"
 						   Grid.Row="2"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -569,7 +533,7 @@
 				  RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
 				<TextBlock Grid.Row="0"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -578,14 +542,14 @@
 				<TextBlock Name="PGR"
 						   Grid.Row="1"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
 				</TextBlock>
 				<TextBlock Grid.Row="2"
 						   FontSize="40"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -594,7 +558,7 @@
 				<TextBlock Name="M1"
 						   Grid.Row="3"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -602,7 +566,7 @@
 				<TextBlock Name="M2"
 						   Grid.Row="4"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -610,7 +574,7 @@
 				<TextBlock Name="M3"
 						   Grid.Row="5"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -618,7 +582,7 @@
 				<TextBlock Name="M4"
 						   Grid.Row="6"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -626,7 +590,7 @@
 				<TextBlock Name="M5"
 						   Grid.Row="7"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -634,7 +598,7 @@
 				<TextBlock Name="M6"
 						   Grid.Row="8"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
@@ -642,14 +606,14 @@
 				<TextBlock Name="M7"
 						   Grid.Row="9"
 						   FontSize="20"
-						   FontWeight="Black"
+						   FontWeight="Light"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"
 						   TextAlignment="Center">
 				</TextBlock>
 			</Grid>
 			<Button Grid.Row="1"
-					FontWeight="Black"
+					FontWeight="Light"
 					HorizontalAlignment="Right"
 					HorizontalContentAlignment="Center"
 					Margin="2,2,2,2"
